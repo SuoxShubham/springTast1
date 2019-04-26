@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="actor" class="com.stackroute.Actor">
+		<property name="name" value="ABC"></property>
+		<property name="gender" value="Male"></property>
+		<property name="age" value="29"></property>
+	</bean>
+</beans>
