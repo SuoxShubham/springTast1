@@ -6,18 +6,14 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans  
                 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 	<bean id="actor" class="com.stackroute.firstdemo.Actor">
-		<property name="name" value="ABC"></property>
-		<property name="gender" value="Male"></property>
-		<property name="age" value="29"></property>
+		<constructor-arg value="Nandi Hills"></constructor-arg>
+		<constructor-arg value="Hill"></constructor-arg>
+		<constructor-arg value="100" type="int"></constructor-arg>
 	</bean>
-	<bean id="movie" class="com.stackroute.firstdemo.Movie">
-		<property name="actor">
-		<bean class="com.stackroute.firstdemo.Actor">
-		<property name="name" value="ABC"></property>
-		<property name="gender" value="Male"></property>
-		<property name="age" value="29"></property>
-		</bean>
-		
-		</property>
+	<bean id="movie" class="com.stackroute.firstdemo.Movie" scope="singleton">
+		<constructor-arg ref="actor" />
+	</bean>
+		<bean id="movieP" class="com.stackroute.firstdemo.Movie" scope="prototype">
+		<constructor-arg ref="actor" />
 	</bean>
 </beans>
