@@ -13,4 +13,5 @@
 	
 	<bean id="movieP" class="com.stackroute.firstdemo.Movie" autowire="constructor">
 	</bean>
+	<bean id="beanlifecycle" class="com.stackroute.firstdemo.BeanLifecycleDemoBean" init-method="customInit" destroy-method="customDestroy"></bean>
 </beans>

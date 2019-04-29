@@ -8,9 +8,11 @@ public class App
     public static void main( String[] args )
     {
 		System.out.println("Hi Main method is up ");
-		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
-//		Movie movie =(Movie)context.getBean("movie");
-//		movie.check();
+		AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		/*
+		 * Movie movie =(Movie)context.getBean("movie"); movie.check();
+		 */
+		context.registerShutdownHook();
 		Movie movieP =(Movie)context.getBean("movieP");
 		movieP.check();
 	}
