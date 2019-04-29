@@ -10,10 +10,7 @@
 		<constructor-arg value="Hill"></constructor-arg>
 		<constructor-arg value="100" type="int"></constructor-arg>
 	</bean>
-	<bean id="movie" class="com.stackroute.firstdemo.Movie" scope="singleton">
-		<constructor-arg ref="actor" />
-	</bean>
-		<bean id="movieP" class="com.stackroute.firstdemo.Movie" scope="prototype">
-		<constructor-arg ref="actor" />
+	
+	<bean id="movieP" class="com.stackroute.firstdemo.Movie" autowire="constructor">
 	</bean>
 </beans>
